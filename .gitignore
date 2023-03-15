@@ -21,3 +21,8 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+*.xd
+*.fig
+.DS_Store
+*.sketch

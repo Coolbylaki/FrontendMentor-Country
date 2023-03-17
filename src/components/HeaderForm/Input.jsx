@@ -1,6 +1,6 @@
 const Input = (props) => {
 	return (
-		<form className="m-6 relative pc:ml-12">
+		<form className="m-6 mb-3 relative pc:ml-12">
 			<input
 				type="text"
 				placeholder="Search for a country..."

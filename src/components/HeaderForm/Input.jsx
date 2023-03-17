@@ -1,12 +1,12 @@
 const Input = (props) => {
 	return (
-		<form className="m-6 mb-3 relative pc:ml-12">
+		<form className="m-6 mb-3 relative pc:ml-12 ">
 			<input
 				type="text"
+				className="p-5 shadow-md w-full rounded pl-20 pc:pr-60 dark:text-white dark:bg-DBlueDark dark:placeholder-white"
 				placeholder="Search for a country..."
-				className="p-5 shadow-md w-full rounded pl-20 pc:pr-60"
 			/>
-			<i className="fa-solid fa-magnifying-glass absolute left-8 top-6 "></i>
+			<i className="fa-solid fa-magnifying-glass absolute left-8 top-6 dark:text-white"></i>
 		</form>
 	);
 };

@@ -2,6 +2,7 @@ import { Fragment, useState, useEffect } from "react";
 
 import Header from "./components/Layout/Header";
 import Form from "./components/HeaderForm/Form";
+import CountryCard from "./components/CountryCard";
 
 function App() {
 	const [theme, setTheme] = useState("light");
@@ -22,6 +23,18 @@ function App() {
 		<Fragment>
 			<Header onChangeTheme={themeSwitchHandler} themeChoice={theme} />
 			<Form />
+			<main className="grid grid-cols-1 place-items-center pc:grid-cols-4">
+				<CountryCard />
+				<CountryCard />
+				<CountryCard />
+				<CountryCard />
+				<CountryCard />
+				<CountryCard />
+				<CountryCard />
+				<CountryCard />
+				<CountryCard />
+				<CountryCard />
+			</main>
 		</Fragment>
 	);
 }

@@ -1,6 +1,6 @@
 const Filter = (props) => {
 	return (
-		<select defaultValue="Filter" className="rounded py-3 pl-6 pr-12 my-6 ml-6 shadow-md">
+		<select defaultValue="Filter" className="rounded py-3 pl-6 pr-12 my-6 ml-6 shadow-md pc:mr-10 pc:pr-16">
 			<option disabled value="Filter">
 				Filter by Region
 			</option>

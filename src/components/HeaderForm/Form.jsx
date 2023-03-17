@@ -3,7 +3,7 @@ import Input from "./Input";
 
 const Form = (props) => {
 	return (
-		<div>
+		<div className="pc:flex pc:justify-between pc:my-5">
 			<Input />
 			<Filter />
 		</div>

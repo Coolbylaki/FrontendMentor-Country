@@ -4,13 +4,7 @@ import Header from "./components/Layout/Header";
 import Form from "./components/HeaderForm/Form";
 
 function App() {
-	const [theme, setTheme] = useState(null);
-
-	useEffect(() => {
-		if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-			setTheme("dark");
-		}
-	}, []);
+	const [theme, setTheme] = useState("light");
 
 	useEffect(() => {
 		if (theme === "dark") {
@@ -26,7 +20,7 @@ function App() {
 
 	return (
 		<Fragment>
-			<Header onChangeTheme={themeSwitchHandler} />
+			<Header onChangeTheme={themeSwitchHandler} themeChoice={theme} />
 			<Form />
 		</Fragment>
 	);

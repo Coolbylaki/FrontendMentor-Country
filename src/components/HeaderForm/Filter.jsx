@@ -3,19 +3,22 @@ import countryData from "../../assets/data.json";
 const Filter = (props) => {
 	const onClickHandler = (e) => {
 		const choice = e.target.value;
-		props.filterCountry(countryData.filter((country) => country.region === choice));
+
+		if (choice === "World") {
+			props.filterCountry(countryData.filter((country) => country));
+		} else {
+			props.filterCountry(countryData.filter((country) => country.region === choice));
+		}
 
 		props.onCountryChange(choice);
 	};
 
 	return (
 		<select
-			defaultValue="Filter"
+			defaultValue="World"
 			className="rounded py-3 pl-6 pr-10 my-6 ml-6 shadow-md pc:mr-10 pc:pr-16 pc:p-5 dark:bg-DBlueDark dark:text-white"
 			onChange={onClickHandler}>
-			<option value="Filter" disabled>
-				Filter by Region
-			</option>
+			<option value="World">Whole World</option>
 			<option value="Africa">Africa</option>
 			<option value="Americas">America</option>
 			<option value="Asia">Asia</option>

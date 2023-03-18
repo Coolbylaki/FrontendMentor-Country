@@ -2,11 +2,10 @@ import countryData from "../../assets/data.json";
 
 const Input = (props) => {
 	const onFormChangeHandler = (e) => {
-		e.preventDefault();
 		const choice = e.target.value;
 		const regex = new RegExp(`^${choice}.*`, "i");
 
-		if (props.countrySelection === "Filter") {
+		if (props.countrySelection === "World") {
 			props.searchCountry(countryData.filter((country) => regex.test(country.name)));
 		} else {
 			props.searchCountry(
@@ -15,8 +14,12 @@ const Input = (props) => {
 		}
 	};
 
+	const onSubmitFormHandler = (e) => {
+		e.preventDefault();
+	};
+
 	return (
-		<form className="m-6 mb-3 relative pc:ml-12" onChange={onFormChangeHandler}>
+		<form className="m-6 mb-3 relative pc:ml-12" onChange={onFormChangeHandler} onSubmit={onSubmitFormHandler}>
 			<input
 				type="text"
 				className="p-5 shadow-md w-full rounded pl-20 pc:pr-60 dark:text-white dark:bg-DBlueDark dark:placeholder-white"

@@ -2,6 +2,7 @@ import countryData from "../../assets/data.json";
 
 const Input = (props) => {
 	const onFormChangeHandler = (e) => {
+		e.preventDefault();
 		const choice = e.target.value;
 		const regex = new RegExp(`^${choice}.*`, "i");
 

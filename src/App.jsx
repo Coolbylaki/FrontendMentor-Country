@@ -18,6 +18,18 @@ function App() {
 		}
 	}, [countries]);
 
+	useEffect(() => {
+		if (theme === "dark") {
+			document.documentElement.classList.add("dark");
+		} else {
+			document.documentElement.classList.remove("dark");
+		}
+	}, [theme]);
+
+	const themeSwitchHandler = () => {
+		setTheme(theme === "dark" ? "light" : "dark");
+	};
+
 	const countryCards = countries.map((country) => {
 		return (
 			<CountryCard
@@ -30,18 +42,6 @@ function App() {
 			/>
 		);
 	});
-
-	useEffect(() => {
-		if (theme === "dark") {
-			document.documentElement.classList.add("dark");
-		} else {
-			document.documentElement.classList.remove("dark");
-		}
-	}, [theme]);
-
-	const themeSwitchHandler = () => {
-		setTheme(theme === "dark" ? "light" : "dark");
-	};
 
 	return (
 		<Fragment>

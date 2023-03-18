@@ -3,7 +3,9 @@ import countryData from "../../assets/data.json";
 const Filter = (props) => {
 	const onClickHandler = (e) => {
 		const choice = e.target.value;
-		props.onFilter(countryData.filter((country) => country.region === choice));
+		props.filterCountry(countryData.filter((country) => country.region === choice));
+
+		props.onCountryChange(choice);
 	};
 
 	return (

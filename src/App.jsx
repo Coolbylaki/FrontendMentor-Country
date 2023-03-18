@@ -7,8 +7,9 @@ import CountryCard from "./components/CountryCard";
 
 function App() {
 	const [theme, setTheme] = useState("light");
+	const [countries, setCountries] = useState(countryData);
 
-	const countryCards = countryData.map((country) => {
+	const countryCards = countries.map((country) => {
 		return (
 			<CountryCard
 				key={country.alpha2Code}
@@ -36,7 +37,7 @@ function App() {
 	return (
 		<Fragment>
 			<Header onChangeTheme={themeSwitchHandler} themeChoice={theme} />
-			<Form />
+			<Form filterCountries={setCountries} />
 			<main className="grid grid-cols-1 place-items-center pc:grid-cols-4">{countryCards}</main>
 		</Fragment>
 	);

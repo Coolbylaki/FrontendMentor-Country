@@ -5,7 +5,6 @@ const Input = (props) => {
 		const choice = e.target.value;
 		const regex = new RegExp(`^${choice}.*`, "i");
 
-		console.log(props.countrySelection);
 		if (props.countrySelection === "Filter") {
 			props.searchCountry(countryData.filter((country) => regex.test(country.name)));
 		} else {

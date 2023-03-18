@@ -9,6 +9,15 @@ function App() {
 	const [theme, setTheme] = useState("light");
 	const [countries, setCountries] = useState(countryData);
 
+	useEffect(() => {
+		const wrapper = document.getElementById("wrapper");
+		if (countries.length <= 4) {
+			wrapper.classList.add("h-screen");
+		} else {
+			wrapper.classList.remove("h-screen");
+		}
+	}, [countries]);
+
 	const countryCards = countries.map((country) => {
 		return (
 			<CountryCard

@@ -1,6 +1,9 @@
+import { useState } from "react";
 import countryData from "../../assets/data.json";
 
 const Filter = (props) => {
+	const [filter, setFilter] = useState(false);
+
 	const onClickHandler = (e) => {
 		const choice = e.target.value;
 
@@ -10,6 +13,7 @@ const Filter = (props) => {
 			props.filterCountry(countryData.filter((country) => country.region === choice));
 		}
 
+		setFilter(true);
 		props.onCountryChange(choice);
 	};
 
@@ -18,7 +22,7 @@ const Filter = (props) => {
 			defaultValue="World"
 			className="rounded py-3 pl-6 pr-10 my-6 ml-6 shadow-md pc:mr-10 pc:pr-16 pc:p-5 dark:bg-DBlueDark dark:text-white"
 			onChange={onClickHandler}>
-			<option value="World">Whole World</option>
+			<option value="World">{filter ? "Whole World" : "Filter by Region"}</option>
 			<option value="Africa">Africa</option>
 			<option value="Americas">America</option>
 			<option value="Asia">Asia</option>

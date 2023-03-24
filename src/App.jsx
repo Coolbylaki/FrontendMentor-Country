@@ -1,4 +1,4 @@
-import { Fragment, useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import countryData from "./assets/data.json";
 
 import Header from "./components/Layout/Header";
@@ -8,15 +8,6 @@ import CountryCard from "./components/CountryCard";
 function App() {
 	const [theme, setTheme] = useState("light");
 	const [countries, setCountries] = useState(countryData);
-
-	useEffect(() => {
-		const wrapper = document.getElementById("wrapper");
-		if (countries.length <= 4) {
-			wrapper.classList.add("h-screen");
-		} else {
-			wrapper.classList.remove("h-screen");
-		}
-	}, [countries]);
 
 	useEffect(() => {
 		if (theme === "dark") {
@@ -44,11 +35,11 @@ function App() {
 	});
 
 	return (
-		<Fragment>
+		<div id="wrapper" className="dark:bg-VDBlueDark min-h-screen">
 			<Header onChangeTheme={themeSwitchHandler} themeChoice={theme} />
 			<Form filterCountries={setCountries} />
 			<main className="grid grid-cols-1 place-items-center pc:grid-cols-4">{countryCards}</main>
-		</Fragment>
+		</div>
 	);
 }
 

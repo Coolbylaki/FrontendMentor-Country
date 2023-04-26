@@ -27,7 +27,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL:
+- Solution URL: https://www.frontendmentor.io/solutions/country-challenge-with-react-and-reactrouter-and-tailwind-YQME7rrAHz
 - Live Site URL: https://fm-country-challenge.netlify.app/
 
 ## My process
@@ -39,7 +39,7 @@ Users should be able to:
 - Mobile-first workflow
 - React - JS library
 - React Router
-- Vite
+- Create-React-App
 
 ### What I learned
 

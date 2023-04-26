@@ -1,6 +1,17 @@
+import { useNavigate } from "react-router-dom";
+
 const CountryCard = (props) => {
+	const redirect = useNavigate();
+
+	const onClickHandler = () => {
+		const countryName = props.name;
+		redirect(countryName);
+	};
+
 	return (
-		<div className="bg-white rounded shadow-md mx-14 mb-10 pc:mb-20 max-w-3xl dark:bg-DBlueDark dark:text-white my-5">
+		<div
+			className="bg-white rounded shadow-md mx-14 mb-10 pc:mb-20 max-w-3xl dark:bg-DBlueDark dark:text-white my-5"
+			onClick={onClickHandler}>
 			<img className="rounded-t w-screen pc:h-56" src={props.flag} alt={`${props.name} flag`} />
 
 			<section className="p-6 pb-8 rounded">

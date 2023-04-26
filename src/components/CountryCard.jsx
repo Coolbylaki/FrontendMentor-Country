@@ -10,7 +10,7 @@ const CountryCard = (props) => {
 
 	return (
 		<div
-			className="bg-white rounded shadow-md mx-14 mb-10 pc:mb-20 max-w-3xl dark:bg-DBlueDark dark:text-white my-5"
+			className="bg-white rounded shadow-md mx-14 mb-10 pc:mb-20 max-w-3xl dark:bg-DBlueDark dark:text-white my-5 hover:cursor-pointer"
 			onClick={onClickHandler}>
 			<img className="rounded-t w-screen pc:h-56" src={props.flag} alt={`${props.name} flag`} />
 

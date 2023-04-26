@@ -20,7 +20,7 @@ const CountryLayout = () => {
 	});
 
 	return (
-		<div id="wrapper" className="dark:bg-VDBlueDark min-h-screen pt-6">
+		<div id="wrapper" className="dark:bg-VDBlueDark pt-6">
 			<Form filterCountries={setCountries} />
 			<main className="grid grid-cols-1 place-items-center pc:grid-cols-4">{countryCards}</main>
 		</div>

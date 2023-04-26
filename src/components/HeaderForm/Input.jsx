@@ -19,7 +19,7 @@ const Input = (props) => {
 	};
 
 	return (
-		<form className="m-6 mb-3 relative pc:ml-12" onChange={onFormChangeHandler} onSubmit={onSubmitFormHandler}>
+		<form className="mx-6 mb-3 relative pc:ml-12" onChange={onFormChangeHandler} onSubmit={onSubmitFormHandler}>
 			<input
 				type="text"
 				className="p-5 shadow-md w-full rounded pl-20 pc:pr-60 dark:text-white dark:bg-DBlueDark dark:placeholder-white"
